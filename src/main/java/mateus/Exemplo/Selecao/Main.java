@@ -1,13 +1,16 @@
 package mateus.Exemplo.Selecao;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;  
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {	
 		boolean meuBoolean = false;
 		int numero = 0;
 		String nome = "Mateus";
+		ArrayList<String> nomes = new ArrayList<String>();
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Digite um numero");
@@ -37,6 +40,28 @@ public class Main {
 		} else { // se a variavel "nome" estiver com algo dentro
 			
 		}
+		
+		for(int i = 1; i <= 10; i++) {
+			System.out.println(i);
+		}
+		
+		nomes.add("Roberto");
+		nomes.add("Romeu");
+		nomes.add("Mateus");
+		nomes.add("Leonardo");
+		nomes.add("Noc");
+		nomes.add("Julia");
+		nomes.add("Jacque");
+		nomes.add("Fumaça");
+		nomes.add("Jurema");
+		nomes.add("Davi");
+		
+		Collections.sort(nomes);
+		
+		for(String nomeNaLista : nomes) {
+			System.out.println(nomeNaLista);
+		}
+		
 		sc.close();
 	}
 }
